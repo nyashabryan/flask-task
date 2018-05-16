@@ -5,6 +5,8 @@ from flask import session
 from flask import redirect
 from flask import request
 
+import requests
+
 
 import time
 
@@ -37,25 +39,34 @@ class User:
 predefHistory = [["01 May 2018", "55.36"], ["05 May 2018", "155.36"], ["10 May 2018", "689.36"], ["11 May 2018", "55.36"]]
 user =  User("Nyasha Bryan", predefHistory)
 
+
 @app.route("/")
 def main_page():
     global user
     if 'balance' in session:
-        user.balanceHistory.append([time.strftime("%d %b %Y"),session['balance']])
-
+        try:
+            user.balanceHistory.append([time.strftime("%d %b %Y"), session['balance']])
+        except:
+            pass
+    
     page = MyPage(user)
     return render_template("base.html", page = page)
 
-app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 
 @app.route("/enterBalance", methods = ["POST", "GET"])
 def enterBalance():
 
     if request.method == "POST":
-        session['balance'] = request.form['balance']
-        print("here")
+        try:
+            session['balance'] = round(eval(request.form['balance']), 2)
+        except:
+            pass
+            # Maybe implement some sort of form control here. 
     return redirect(url_for("main_page"))
+
+app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+
 
 """
     The genius is in making the session have a variable balanceHistory which is actually a 
