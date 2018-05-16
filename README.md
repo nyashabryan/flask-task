@@ -14,12 +14,21 @@ Create a simple flask application (http://flask.pocoo.org/) with a page that dis
   * Date
   * Balance (in ZAR)
 
+
+#### Nyasha Bryan Edit
+
+The route to see the bank the balance is set at "/". Also, the rendered page uses Google Font's so, it looks better when used with internet access. The page is being rendered using the Jinja2 template engine and is called base.html.
+
 ### (2)
 Change the layout and style your page using CSS. The layout should look something like this.
 
 ![Mockup](Mockup.png)
 
-The mockup is just a suggestion, you can choose your own colours etc. Try to make it look clean and attractive. We are not looking for ground breaking design, just a demonstration of knowledge. Don't worry about cross browser compatibility, assume a reasonably modern browser. Bonus points for making the layout responsive and work on mobile devices.
+The mockup is just a suggestion, you can choose your own colours etc. Try to make it look clean and attractive. We are not looking for ground breaking design, just a demonstration of knowledge. Don't worry about cross browser compatibility, assume a reasonably modern browser. Bonus points for making the layout responsive and work on mobile devices.\
+
+#### Nyasha Bryan Edit
+
+For a quick aesthetic design, bootstrap4 was used in the design to make it look better. Be sure to use the templates with an active internet connection to access the necessary stylesheets and JS.
 
 ### (3)
 Add a form below the table that allows you set your current balance. When submitted this should store the balance using the session (http://flask.pocoo.org/docs/0.12/quickstart/#sessions) and then when the table is rendered again it should appear at the end of the table. Submitting multiple times should append and grow the list.
