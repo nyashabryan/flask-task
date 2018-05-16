@@ -7,4 +7,4 @@ app = Flask(__name__)
 @app.route("/")
 def main_page():
 
-    return("<p>Nyasha</p>")
+    return render_template("base.htnl")

@@ -3,10 +3,45 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Bank Balance</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+
+    <!--Styles-->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+    <style>
+        h1, h2, h3, h4{
+            font-family: "Lato", sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        table{
+            font-family: "Open Sans", sans-serif;
+            margin: auto;
+        }
+
+        td{
+            padding-left: 10px;
+            padding-right: 10px;
+
+
+
+        }
+
+        table, th, td, tr{
+            border: 1px solid grey;
+        }
+
+        th td{
+            font-family: "Lato", sans-serif;
+        }
+
+        .balance{
+            text-align: right;
+        }
+
+        
+    </style>
 </head>
 <body>
 
@@ -14,11 +49,43 @@
     <h1>My Bank Account</h1>
 
     <table>
-
+        <thead>
         <tr>
-            <td style = "padding: 50px;">25 May 2018</td>
-            <td style = "padding: 50px;">55.36</td> 
+            <th>Date</th>
+            <th>ZAR</th>
+        </tr>
+            
+        </thead>
+        <tbody>
+        <tr>
+            <td>01 May 2018</td>
+            <td class= "balance">55.36</td> 
         </tr> 
+        <tr>
+            <td>05 May 2018</td>
+            <td class= "balance">165.69</td> 
+        </tr> 
+        <tr>
+            <td>06 May 2018</td>
+            <td class= "balance">1500.87</td> 
+        </tr> 
+        <tr>
+            <td>11 May 2018</td>
+            <td class= "balance">1.54</td> 
+        </tr> 
+        <tr>
+            <td>20 May 2018</td>
+            <td class= "balance">5500.36</td> 
+        </tr> 
+        <tr>
+            <td>25 May 2018</td>
+            <td class= "balance">15000.82</td> 
+        </tr> 
+            
+        </tbody>
+    
+
+
     </table>
     
 </body>
