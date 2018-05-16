@@ -33,6 +33,11 @@ For a quick aesthetic design, bootstrap4 was used in the design to make it look 
 ### (3)
 Add a form below the table that allows you set your current balance. When submitted this should store the balance using the session (http://flask.pocoo.org/docs/0.12/quickstart/#sessions) and then when the table is rendered again it should appear at the end of the table. Submitting multiple times should append and grow the list.
 
+#### Nyasha Bryan Edit
+
+
+Basically Working as required. Everytime the form is submitted it renders the page again with the new balance available.
+
 ### (4)
 Use the LUNO API to find the current price in bitcoin and display the bitcoin value of each balance entry in a new column. This is obviously only teh present day value but this is a toy example, so don't worry.
 
