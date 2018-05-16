@@ -52,30 +52,13 @@
                         
                     </thead>
                     <tbody>
+                    
+                    {% for item in page.user.balanceHistory%}
                     <tr>
-                        <td>01 May 2018</td>
-                        <td class= "balance">55.36</td> 
-                    </tr> 
-                    <tr>
-                        <td>05 May 2018</td>
-                        <td class= "balance">165.69</td> 
-                    </tr> 
-                    <tr>
-                        <td>06 May 2018</td>
-                        <td class= "balance">1500.87</td> 
-                    </tr> 
-                    <tr>
-                        <td>11 May 2018</td>
-                        <td class= "balance">1.54</td> 
-                    </tr> 
-                    <tr>
-                        <td>20 May 2018</td>
-                        <td class= "balance">5500.36</td> 
-                    </tr> 
-                    <tr>
-                        <td>25 May 2018</td>
-                        <td class= "balance">15000.82</td> 
-                    </tr> 
+                        <td>{{item[0]}}</td>
+                        <td class= "balance">{{item[1]}}</td>
+                    </tr>
+                    {% endfor %}
                         
                     </tbody>
 
@@ -87,10 +70,10 @@
                 <div class>
 
                 </div>
-                <form method = "POST">
+                <form method = "POST" action = "{{url_for("enterBalance")}}">
                     <div class = "form-group">
                         <label for "balance">Set Balance:</label>
-                        <input type = "text" class = "form-control" id = "balance" name = "balance" placeholder="Enter Current Balance: (ZAR)">
+                        <input type = "text" class = "form-control" name = "balance" id = "balance" placeholder="Enter Current Balance: (ZAR)">
                     </div>
                     <button type = "submit" class = "btn btn-secondary">Submit</button>
                 </form>
@@ -98,6 +81,10 @@
         </div>
 
     </div>
+
+    <br>
+    <br>
+    <br>
     
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
