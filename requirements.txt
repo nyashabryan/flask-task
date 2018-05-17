@@ -1,0 +1,7 @@
+# The project requirements
+
+1. flask 
+2. json
+3. requirements
+4. requests
+5. bootstrap4

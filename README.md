@@ -8,6 +8,8 @@ The goal of these tasks is to build a very simple banking app that displays your
 This is a simple task and should not take you too long to do. We are interested in the clarity and simplicity of your code. Please include a README on how to run this, a requirements.txt file would be nice to. At a minimum this expects that you can get the python components completed, if you are not comfortable with the javascript sections you submit in a any case.
 
 Fork this repository and when completed send a message to "jobs@businessoptics.biz" with the relevant github repo address.
+
+
 # Requirements
 
 Check the requirements.txt
