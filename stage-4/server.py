@@ -36,22 +36,18 @@ class User:
 # A predefined history which is loaded when the page originally starts up
 
 
-predefHistory = [["01 May 2018", "55.36"], ["05 May 2018", "155.36"], ["10 May 2018", "689.36"], ["11 May 2018", "55.36"]]
+predefHistory = [["01 May 2018", 55.36], ["05 May 2018", 155.36], ["10 May 2018", 689.36], ["11 May 2018", 55.36]]
 user =  User("Nyasha Bryan", predefHistory)
 
 #Method to get the BitCoin Exchange Rate
 
 def getBitRate():
 
-    data = {
-        "pair": "XBTZAR"
-    }
-
-    r = requests.get("https://api.mybitx.com/api/1/ticker")
+    r = requests.get("https://api.mybitx.com/api/1/ticker?pair=XBTZAR")
     try:
-        return eval(json.loads(r.json())[0]['ask'])
-    catch:
-        return 0
+        return eval(r.json()['ask'])
+    except:
+        return 1
     
 
 @app.route("/")
