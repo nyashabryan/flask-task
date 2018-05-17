@@ -50,6 +50,11 @@ Basically Working as required. Everytime the form is submitted it renders the pa
 ### (4)
 Use the LUNO API to find the current price in bitcoin and display the bitcoin value of each balance entry in a new column. This is obviously only teh present day value but this is a toy example, so don't worry.
 
+
+#### Nyasha Bryan Edit
+
+The values of the BitCoin were calculated using the "ask" rate not the bid rate.
+
 Use the requests library (http://docs.python-requests.org/en/master/) to do the API call. The endpoint you need to hit is "https://api.mybitx.com/api/1/ticker?pair=XBTZAR", you can get documentation here (https://www.luno.com/en/api#market-ticker). 
 
 ### (5)
