@@ -43,5 +43,6 @@ For a quick aesthetic design, bootstrap4 was used in the design to make it look 
 The values of the BitCoin were calculated using the "ask" rate not the bid rate. 
 
 
-### (5)
+### Stage 5
+
 Now instead of doing a page reload to add a new balance, use Javascript to do an asynchronous request. This should save the result to the server and adds a new row to the balances table. You may use any javascript library or framework you want (but don't go over board, this should be simple, probably use jquery). I suggest you create a single new endpoint "api/update" that take a Rand figure and returns the full balance history until now, and then you re-render the balance table.
